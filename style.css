@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+/* Importação de font (google fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/*Variaveis*/
+:root {
+    --azul: #41442a;
+    --branco: #fff;
+
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/***** bREAKPOINTS ******/
+
+/*Layout*/
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    /* 1em é igual a 100% que é o tamanho padrão do dispositivo */
+}
+
+.container {
+    margin: 0 auto; /* margin: 0 auto; */
+    display: flex; /* centralizar o container*/
+    justify-content: space-between;
+    align-items: center;
+}
+.botao {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: var(--vermelho);
+    width: 180px;
+    padding: 10px 0px;
+    border: 2px solid(--branco);
+    border-radius: 25px;
+    align-self: center;
+    margin-top: 10px;
+}
+/* Smartphome portrait ***** 
+
+    /* Cabeçalho*/
+
+header {
+    height: 100px;
+    background-color: 
+}
+
+#logo img {
+    width: 100px;
+    height: 100px;
+
+}
+ 
+#check {
+    display: none;
+}
+
+/*efeito de deslizar o menu*/
+/* Se check estiver "ticado", cria um estilo parar url*/
+#check:checked~ul {
+    right: 0px;
+
+}
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    color: #66ff00;
+}
+
+nav ul {
+    height: 100vh;
+    /*100vh - 100% altura da tela*/
+    background-color: var(--azul);
+    list-style: none;
+    /*remover bullets*/
+    width: 65%;
+    position: fixed;
+    top: 80px;
+    right: -65%;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    /*é a parte que ajusta os párametros da lista do menu*/
+    padding: 15px 20px 15px 20px;
+    border-bottom: 1px solid var(--branco);
+    text-align: left;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    /*remover sublinhado*/
+}
+   /* Banner*/
+main{
+    height: 60vh;
+    position: relative;
+}
+main video{ 
+    width: 100%;;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.destaque{
+    position: absolute;
+    bottom:30px;
+    background: #000;
+    left: 30px;
+    }
+    main h1, h2{
+        color: var(--branco);
+        text-shadow: #000 0.005em 0.05em 0.05em; /*efeito de sombra*/
+           }
+    main h1 {     
+             font-size: 1.75em; /*tamanho da letra*/
+         }
+    main h2{ 
+        font-size: 1.2  em;
+
+    }
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/* Smartphome Landscape ******/
+@media (min-width: 576px) {
+
+    /*cabeçalho*/
+    #logo img {
+        margin: 10px 0px 0x 0x;
+    }
+
+    .container {
+        max-width: 540px;
+        background:
+
+    }
+}
+
+@media (min-width: 768px) {
+    nav ul{ 
+        width:  50%;
+        height: 50%;
+    }
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*>
+
+/* Smartphome PCS / Notbooks >>>>>>>>>>>>>>>>>>>>>>>> ******/
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        background-color:
+    }
+    #logo img {
+        width: 128px;
+        height: 128px;
+    }
+}
+
+/* Smartphome PCS / Notbooks >>>>>>>>>>>>>>>>>>>>>>>> ******/
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        background-color:;
+        display: flex;
+    }
+
+    header {
+        height: 150;
+    }
+
+    #logo img {
+        width: 128px;
+        height: 128px;
+    }
+    /* transformação do menu no pc e notbook pondo none exclui o hamburguer*/
+    label {
+        display: none;
+    }
+    nav ul{
+         width: 100%;
+         height: auto;
+         position: right;
+         background-color: transparent; 
+    }
+    nav ul li {
+        float:left;
+        border: 0;
+    }
+    nav ul li a {
+        color: var( --azul);
+    }
+    nav ul li a:hover {
+        color: var(--vermelho);
+    }
+}
+
+/* Telas full hd >>>>>>>>>>>>>>>>>>>>>>>> ******/
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1360px;
+        background-color:;
+    }
+
+    header {
+        height: 200px;
+    }
+
+    #logo img {
+        width: 176px;
+        height: 176px;
+    }
+}
